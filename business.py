@@ -3,6 +3,13 @@ import pandas as pd
 def get_data():
     
     df = pd.read_csv('data.csv')
+    # df.drop(["Austria","Netherlands","Spain"], axis=1, inplace = True)
+
+    df.drop(df.index[(df["Country"] == "Austria"),],axis=0,inplace=True)
+    df.drop(df.index[(df["Country"] == "Netherlands") ],axis=0,inplace=True)
+    df.drop(df.index[(df["Country"] == "Spain") ],axis=0,inplace=True)
+
+
 
     #print(df['states'].tolist())
 
@@ -25,6 +32,7 @@ def get_data():
     # print(result_dict)
 
     return result_dict
+
 
 # def add_row(Lake, Area):
 

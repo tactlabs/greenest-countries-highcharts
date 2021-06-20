@@ -18,6 +18,7 @@ http://0.0.0.0:3000/api/data
 def api_get_data():
 
     result = business.get_data()
+    
 
     # result_dict = {
 
